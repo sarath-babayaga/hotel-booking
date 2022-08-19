@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "7e2134fd-0da6-4a43-8ce0-8e4284a4d6d2",
+		"name": "HotelApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13543299"
+	},
+	"item": [
+		{
+			"name": "Hotels",
+			"item": [
+				{
+					"name": "create hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"hotel\",\n    \"type\":\"hotel\",\n    \"city\":\"new york\",\n    \"address\":\"newyorkstrasse\",\n    \"distance\":\"500\",\n    \"title\":\"good\",\n    \"description\":\" hotel is good \",\n    \"cheapestPrice\":100\n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4400/api/hotels",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Hotel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"odesa hotel 2\",\n    \"type\": \"hotel\",\n    \"city\": \"new york\",\n    \"address\": \"newyorkstrasse\",\n    \"distance\": \"500\",\n    \"title\": \"good\",\n    \"description\": \" hotel is good \",\n    \"cheapestPrice\": 100,\n    \"featured\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4400/api/hotels/6293d042c9f98386ab93086c/",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"hotels",
+								"6293d042c9f98386ab93086c",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Hotel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4400/api/hotels/6293d042c9f98386ab93086c",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"hotels",
+								"6293d042c9f98386ab93086c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all hotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4400/api/hotels/",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"hotels",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hotel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4400/api/hotels/6293d61eca5460501893b523",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"hotels",
+								"6293d61eca5460501893b523"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"pehirdin\",\n    \"email\":\"1231@gmail.com\",\n    \"password\":\"8080\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4400/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"pehirdin\",\n    \"password\":\"8080\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4400/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"username\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4400/api/users/62964be94b737b278c2f3f6f",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"users",
+								"62964be94b737b278c2f3f6f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkAuth",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"username\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4400/api/users/checkauth",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"users",
+								"checkauth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rooms",
+			"item": [
+				{
+					"name": "create room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"King room\",\n    \"description\":\"King size bed,bathroom,balcony\",\n    \"price\":1000,\n    \"roomNumber\":[\n        {\"number\":101},\n        {\"number\":102}\n        ]\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4400/api/rooms/6296715b5b8a9a5515950783",
+							"host": [
+								"localhost"
+							],
+							"port": "4400",
+							"path": [
+								"api",
+								"rooms",
+								"6296715b5b8a9a5515950783"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
